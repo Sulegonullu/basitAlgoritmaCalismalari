@@ -1,1 +1,33 @@
-C++ practice code
+//C++ practice code
+//Program that finds out how many days are in any month
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    short int month;
+    cout << "Enter month number (1–12): ";
+    cin  >> month;
+
+    switch (month)
+{
+        case 4: case 6: case 9: case 11:
+            cout << "It has 30 days\n";
+            break;
+
+        case 1: case 3: case 5: case 7:  // added 7
+        case 8: case 10: case 12:        // added 10 as well
+            cout << "It has 31 days\n";
+            break;
+
+        case 2:
+            cout << "It has 28 or 29 days\n";
+            break;
+
+        default:
+            cout << "Invalid month number\n";
+            break;
+    }
+
+    return 0;
+}
